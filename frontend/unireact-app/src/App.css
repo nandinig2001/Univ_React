@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* LOGIN FORM */
+
+.form-group{
+  text-align: center;
+  margin: 2rem;
+  align-items: center;
+}
+
+.btn-warning{
+  text-align: center;
+  margin: 2rem;
+  align-items: center;
+}
+
+.note {
+  color: rgb(82, 82, 82);
+  margin: 8px 0;
+}
+
+input.active:valid {
+  box-shadow: 0 0 3px 1px rgb(84, 189, 84);
+}
+
+input.active:invalid {
+  box-shadow: 0 0 3px 1px rgb(255, 63, 63);
+}
+
+.error {
+  color: rgb(255, 63, 63);
+  font-size: 12px;
+  margin-top: 5px;
+}
+

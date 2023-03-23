@@ -15,7 +15,7 @@ const Home = () => {
                         Welcome to University
                       </h1>
                       <div>
-                      <a className="about-link-1" href="" target="_blank" style={{ padding:"1rem" }}>
+                      <a className="about-link-1" href="#" target="_blank" style={{ padding:"1rem" }}>
                         Sign In
                       </a>
                       </div>
@@ -104,7 +104,7 @@ const Home = () => {
             </div>
             
 
-            <div className="about-back"></div>
+            
             <div className="me-grid">
               <div className="container">
                 <div className="row">
@@ -128,10 +128,10 @@ const Home = () => {
                        Department of Statistics from 2005 to 2015. He has around 30 years of teaching and 35 years of research experience.{" "}
                       </p>
                       <a
-                        className="about-link-1" href="">
+                        className="about-link-1" href="#">
                         Contact 
                       </a>
-                      <a className="about-link-2" href="#contact">
+                      <a className="about-link-2" href="#">
                         Register
                       </a>
                     </div>
@@ -403,7 +403,7 @@ const Home = () => {
                     <div className="col-md-4 col-sm-6">
                       <div className="blog-main">
                         <a
-                          href=""
+                          href="#"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -415,7 +415,7 @@ const Home = () => {
                         </a>
                         <div className="blog-head">
                           <a
-                            href=""
+                            href="#"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ textDecoration: "none" }}
@@ -433,7 +433,7 @@ const Home = () => {
                           ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                           </p>
                           <a
-                            href=""
+                            href="#"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="about-link-2"
@@ -446,7 +446,7 @@ const Home = () => {
                     <div className="col-md-4 col-sm-6">
                       <div className="blog-main">
                         <a
-                          href=""
+                          href="#"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -458,7 +458,7 @@ const Home = () => {
                         </a>
                         <div className="blog-head">
                           <a
-                            href=""
+                            href="#"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ textDecoration: "none" }}
@@ -476,7 +476,7 @@ const Home = () => {
                           aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                           </p>
                           <a
-                            href=""
+                            href="#"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="about-link-2"
@@ -489,7 +489,7 @@ const Home = () => {
                     <div className="col-md-4 col-sm-6">
                       <div className="blog-main">
                         <a
-                          href="S"
+                          href="#"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -501,7 +501,7 @@ const Home = () => {
                         </a>
                         <div className="blog-head">
                           <a
-                            href=""
+                            href="#"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ textDecoration: "none" }}
@@ -517,7 +517,7 @@ const Home = () => {
                             eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                           </p>
                           <a
-                            href="https://dev.to/sanajitjana/form-example-in-laravel-8-45oc"
+                            href="#"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="about-link-2"
@@ -542,18 +542,18 @@ const Home = () => {
             <div className="contact-grid">
               <div className="contact-form-details wow fadeIn">
                 <div className="container">
-                  <div className="container">
-                      <div className="row">
-                        <div className="col-md-12">
-                          <div className="main-title text-center wow fadeIn">
-                            <h3>Contact Us</h3>
-                            <div className="underline1"></div>
-                            <div className="underline2"></div>
-                          </div>
+                <div className="row">
+                      <div className="col-md-12">
+                        <div className="main-title text-center wow fadeIn">
+                          <h3> Contact Us</h3>
+                          <div className="underline1"></div>
+                          <div className="underline2"></div>
+                          
                         </div>
                       </div>
-                  </div>
-                  <div className="row contact-row">
+                    </div>
+                  
+                  <div className="row contact-row mt-5">
                     <div className="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-1 contact-col">
                       <h3>Write Your Message Here</h3>
                       <div className="contact-form">
