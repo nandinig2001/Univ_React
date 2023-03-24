@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 
+
 // import Pages
 import Home from "./pages/Home";
 import LoginForm from "./pages/LoginForm";
@@ -19,6 +20,7 @@ import Admissions from "./pages/Admissions";
 import Examform from "./pages/Examform";
 import Examschedule from "./pages/Examschedule";
 import Exampro from "./pages/Exampro";
+import Admissionpro from "./pages/Admissionpro";
 
 
 function App() {
@@ -35,6 +37,7 @@ function App() {
             <Route exact path="/Examform" element={<Examform/>} />
             <Route exact path="/Examschedule" element={<Examschedule/>} />
             <Route exact path="/Exampro" element={<Exampro/>} />
+            <Route exact path="/Admissionpro" element={<Admissionpro/>} />
           </Routes>
         
         <Footer />

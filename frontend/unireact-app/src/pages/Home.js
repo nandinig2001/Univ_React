@@ -15,7 +15,7 @@ const Home = () => {
                         Welcome to University
                       </h1>
                       <div>
-                      <a className="about-link-1" href="#" target="_blank" style={{ padding:"1rem" }}>
+                      <a className="about-link-1" href="RegisterForm" target="_blank" style={{ padding:"1rem" }}>
                         Sign In
                       </a>
                       </div>
@@ -111,7 +111,7 @@ const Home = () => {
                   <div className="col-md-4 col-sm-6 col-xs-12 about-col">
                     <div className="about-image">
                       <img
-                        src="https://www.forbesindia.com/media/images/2014/Jul/img_76434_raamdeo_agrawal.jpg"
+                        src="https://mnlumumbai.edu.in/images/VC%20Sir2.JPG"
                         className="about-img wow fadeIn"
                       />
                     </div>
@@ -128,10 +128,10 @@ const Home = () => {
                        Department of Statistics from 2005 to 2015. He has around 30 years of teaching and 35 years of research experience.{" "}
                       </p>
                       <a
-                        className="about-link-1" href="#">
+                        className="about-link-1" href="#contact">
                         Contact 
                       </a>
-                      <a className="about-link-2" href="#">
+                      <a className="about-link-2" href="Registerform">
                         Register
                       </a>
                     </div>
@@ -651,7 +651,7 @@ const Home = () => {
                             value="Subscribe"
                             name="subscribe"
                             id="submit mc-embedded-subscribe"
-                            className="btn btn-success"
+                            className="btn btn-warning"
                           >
                             Send Message
                           </button>

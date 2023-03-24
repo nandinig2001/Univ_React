@@ -7,13 +7,13 @@ function Header() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{ height:"8rem" }}>
       <Container>
-        <Navbar.Brand href="/home" style={{ color:"white", fontSize:"25px", fontWeight:"2rem", padding:"15px" }}>University</Navbar.Brand>
+        <Navbar.Brand href="home" style={{ color:"white", fontSize:"25px", fontWeight:"2rem", padding:"15px" }}>University</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto" style={{ paddingRight:"3rem" }}>
           <NavDropdown title="Admissions" id="collasible-nav-dropdown" style={{ color:"white",fontSize:"15px",paddingRight:"3rem"}}>
               <NavDropdown.Item href="admissions" style={{  fontSize:"15px" }}>Colleges</NavDropdown.Item>
-              <NavDropdown.Item href="" style={{ fontSize:"15px" }}>Admission Process</NavDropdown.Item>
+              <NavDropdown.Item href="Admissionpro" style={{ fontSize:"15px" }}>Application/Process</NavDropdown.Item>
               <NavDropdown.Item href="" style={{fontSize:"15px"}}>Fee Payment</NavDropdown.Item>
               <NavDropdown.Item href="" style={{fontSize:"15px"}}>Financial Aid Grant</NavDropdown.Item>
                          
@@ -23,7 +23,7 @@ function Header() {
           <NavDropdown title="Examinations" id="collasible-nav-dropdown" style={{ color:"white",fontSize:"15px",paddingRight:"3rem"}}>
               <NavDropdown.Item href="examform" style={{  fontSize:"15px" }}>Examination Form</NavDropdown.Item>
               <NavDropdown.Item href="examschedule" style={{ fontSize:"15px" }}>Examination Schedule</NavDropdown.Item>
-              <NavDropdown.Item href="exampro" style={{fontSize:"15px"}}>Examination Process</NavDropdown.Item>
+              <NavDropdown.Item href="exampro" style={{fontSize:"15px"}}>Examination Hall Ticket</NavDropdown.Item>
                          
             </NavDropdown>
             </Nav>
@@ -65,6 +65,7 @@ function Header() {
               <NavDropdown.Item href="#" style={{  fontSize:"15px" }}>My Profile</NavDropdown.Item>
               <NavDropdown.Item href="#" style={{ fontSize:"15px" }}>My Records</NavDropdown.Item>
               <NavDropdown.Item href="#" style={{fontSize:"15px"}}>Notifications</NavDropdown.Item>
+              <NavDropdown.Item href="#" style={{fontSize:"15px"}}>Timetable</NavDropdown.Item>
               <NavDropdown.Item href="#" style={{fontSize:"15px"}}>Logout</NavDropdown.Item>
              
             </NavDropdown>
