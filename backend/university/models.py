@@ -78,7 +78,6 @@ class Grade(models.Model):
     grade = models.DecimalField(max_digits=5, decimal_places=2)
     submitted_at = models.DateTimeField(auto_now_add=True)
 
-
 class ERP(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     student = models.ForeignKey(User, on_delete=models.CASCADE)
