@@ -9,51 +9,25 @@ from rest_framework.views import APIView
 from django.contrib.auth.models import User
 from .models import College, Department, UserProfile, Course, CourseContent, Assignment, Grade, ERP
 from .serializers import CollegeSerializer, DepartmentSerializer, UserProfileSerializer, CourseSerializer, CourseContentSerializer, AssignmentSerializer, GradeSerializer, ERPSerializer, UserSerializer
+from rest_framework.permissions import AllowAny
+from .serializers import UserSerializer
+from .serializers import LoginSerializer
 
-class RegistrationView(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+class LoginAPIView(generics.GenericAPIView):
+    serializer_class = LoginSerializer
+    permission_classes = [AllowAny]
 
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
-        if serializer.is_valid():
-            username = serializer.validated_data['username']
-            email = serializer.validated_data['email']
-            password = serializer.validated_data['password']
-            first_name = serializer.validated_data['first_name']
-            last_name = serializer.validated_data['last_name']
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data
+        login(request, user)
+        return Response({'status': 'success'}, status=status.HTTP_200_OK)
+    
+class RegistrationAPIView(generics.CreateAPIView):
+    serializer_class = UserSerializer
+    permission_classes = [AllowAny]
 
-            user = User.objects.create_user(
-                username=username,
-                email=email,
-                password=password,
-                first_name=first_name,
-                last_name=last_name
-            )
-
-            return Response(
-                {"message": "Registration Successful!"},
-                status=status.HTTP_201_CREATED
-            )
-
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-class LoginAPIView(APIView):
-    """
-    API view for user login.
-    """
-
-    def post(self, request):
-        username = request.data.get('username')
-        password = request.data.get('password')
-
-        user = authenticate(request, username=username, password=password)
-
-        if user is not None:
-            login(request, user)
-            token, created = Token.objects.get_or_create(user=user)
-            return Response({'token': token.key}, status=status.HTTP_200_OK)
-        else:
-            return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 # College views
 class CollegeListCreateView(generics.ListCreateAPIView):
     queryset = College.objects.all()
