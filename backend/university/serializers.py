@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 from allauth.account.adapter import get_adapter
 from allauth.account.utils import setup_user_email
 from allauth.utils import email_address_exists
+from django.contrib.auth import authenticate
 
 from django.contrib.auth import get_user_model
 
