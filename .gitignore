@@ -6,3 +6,4 @@ backend/colleges/__pycache__/
 backend/accounts/migrations/__pycache__/
 backend/colleges/migrations/__pycache__/
 backend/students/migrations/__pycache__/
+backend/university/__pycache__/

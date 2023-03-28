@@ -8,25 +8,31 @@ from rest_framework import status
 from rest_framework.views import APIView
 from django.contrib.auth.models import User
 from .models import College, Department, UserProfile, Course, CourseContent, Assignment, Grade, ERP
-from .serializers import CollegeSerializer, DepartmentSerializer, UserProfileSerializer, CourseSerializer, CourseContentSerializer, AssignmentSerializer, GradeSerializer, ERPSerializer, UserSerializer
+from .serializers import CollegeSerializer, DepartmentSerializer, UserProfileSerializer, CourseSerializer, CourseContentSerializer, AssignmentSerializer, GradeSerializer, ERPSerializer
 from rest_framework.permissions import AllowAny
-from .serializers import UserSerializer
+from .serializers import RegistrationSerializer
 from .serializers import LoginSerializer
+from rest_framework.authtoken.views import ObtainAuthToken
 
-class LoginAPIView(generics.GenericAPIView):
-    serializer_class = LoginSerializer
-    permission_classes = [AllowAny]
+class UserLoginView(ObtainAuthToken):
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data, context={'request': request})
+        if serializer.is_valid():
+            user = serializer.validated_data['user']
+            token, created = Token.objects.get_or_create(user=user)
+            return Response({'token': token.key})
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+class RegistrationAPIView(APIView):
+    serializer_class = RegistrationSerializer
 
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        user = serializer.validated_data
-        login(request, user)
-        return Response({'status': 'success'}, status=status.HTTP_200_OK)
-    
-class RegistrationAPIView(generics.CreateAPIView):
-    serializer_class = UserSerializer
-    permission_classes = [AllowAny]
+        if serializer.is_valid():
+            serializer.save(request=request)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # College views
 class CollegeListCreateView(generics.ListCreateAPIView):

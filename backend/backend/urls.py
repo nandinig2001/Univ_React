@@ -56,6 +56,6 @@ urlpatterns = [
     path('erps/<int:pk>/', ERPDetailView.as_view(), name='erp_detail'),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('api/rest-auth/', include('rest_auth.urls')),
-    path('api/rest-auth/registration/', include('rest_auth.registration.urls')),
+    path('accounts/', include('allauth.urls')),
+
 ]
