@@ -2,37 +2,63 @@ from rest_framework import serializers
 from .models import College, Department, UserProfile, Course, CourseContent, Assignment, Grade, ERP
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
-from django.contrib.auth import authenticate
+from allauth.account.adapter import get_adapter
+from allauth.account.utils import setup_user_email
+from allauth.utils import email_address_exists
+
+from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
 class LoginSerializer(serializers.Serializer):
-    email = serializers.EmailField()
-    password = serializers.CharField()
+    email = serializers.EmailField(required=True)
+    password = serializers.CharField(min_length=8, write_only=True)
 
     def validate(self, data):
-        user = authenticate(
-            username=data['email'],
-            password=data['password']
-        )
-        if user and user.is_active:
-            return user
-        raise serializers.ValidationError('Incorrect email or password')
-class UserSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True)
+        email = data.get('email', None)
+        password = data.get('password', None)
 
-    def create(self, validated_data):
-        user = User.objects.create(
-            email=validated_data['email'],
-            username=validated_data['username'],
-        )
-        user.set_password(validated_data['password'])
-        user.save()
+        if email and password:
+            user = authenticate(email=email, password=password)
+            if user:
+                if user.is_active:
+                    data['user'] = user
+                else:
+                    msg = 'User account is disabled.'
+                    raise serializers.ValidationError(msg)
+            else:
+                msg = 'Unable to log in with provided credentials.'
+                raise serializers.ValidationError(msg)
+        else:
+            msg = 'Must include "email" and "password".'
+            raise serializers.ValidationError(msg)
+
+        return data
+class RegistrationSerializer(serializers.Serializer):
+    email = serializers.EmailField(required=True)
+    password = serializers.CharField(min_length=8, write_only=True)
+
+    def validate_email(self, email):
+        if email_address_exists(email):
+            raise serializers.ValidationError("Email address already exists")
+        return email
+
+    def validate_password(self, password):
+        return get_adapter().clean_password(password)
+
+    def get_cleaned_data(self):
+        return {
+            'email': self.validated_data.get('email', ''),
+            'password': self.validated_data.get('password', ''),
+        }
+
+    def save(self, request):
+        adapter = get_adapter()
+        user = adapter.new_user(request)
+        self.cleaned_data = self.get_cleaned_data()
+        adapter.save_user(request, user, self)
+        setup_user_email(request, user, [])
         return user
-
-    class Meta:
-        model = User
-        fields = ('id', 'email', 'username', 'password')
 
 class CollegeSerializer(serializers.ModelSerializer):
     class Meta:

@@ -42,10 +42,8 @@ INSTALLED_APPS = [
     'university',
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_auth',
     'allauth',
     'allauth.account',
-    'rest_auth.registration',
 ]
 
 MIDDLEWARE = [
