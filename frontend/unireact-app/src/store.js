@@ -1,4 +1,6 @@
+// npm install redux react-redux
 import { createStore } from 'redux'
+
 
 const initialState = {
   sidebarShow: true,

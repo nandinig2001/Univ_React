@@ -24,6 +24,11 @@
     "lint-fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
+    "@coreui/icons": "^3.0.1",
+    "@coreui/icons-react": "^2.1.0",
+    "@coreui/react": "^4.7.0",
+    "@coreui/react-chartjs": "^2.1.2",
+    "@coreui/utils": "^2.0.1",
     "@mantine/core": "^6.0.0",
     "@mantine/form": "^6.0.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -31,18 +36,33 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
     "dropdown": "^0.2.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-bootstrap-dropdown": "^0.3.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
     "reactstrap": "^9.1.6",
+    "redux": "^4.2.1",
     "web-vitals": "^2.1.4",
     "yup": "^1.0.2"
   },
   "engines": {
     "node": ">=10",
     "npm": ">=6"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
