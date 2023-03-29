@@ -1,6 +1,40 @@
 import React from "react";
 
 class BasicForm extends React.Component {
+
+  handleSubmit(e) {    
+    e.preventDefault();
+  
+    if (!this.showFormErrors()) {
+      console.log('form is invalid: do not submit');
+    } else {
+  
+      // call login API
+      fetch('http://127.0.0.1:8010/accounts/login/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: this.state.username,
+          password: this.state.password
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          // login success
+          console.log('login success');
+        } else {
+          // login failed
+          console.log('login failed');
+        }
+      })
+      .catch(error => {
+        console.error('login error', error);
+      });
+    }
+  }
+  
   
     constructor(props) {
       super(props);
@@ -25,17 +59,17 @@ class BasicForm extends React.Component {
       this.showInputError(e.target.name);
     }
     
-    handleSubmit(e) {    
-      e.preventDefault();
+    // handleSubmit(e) {    
+    //   e.preventDefault();
       
-      console.log('component state', JSON.stringify(this.state));
+    //   console.log('component state', JSON.stringify(this.state));
       
-      if (!this.showFormErrors()) {
-        console.log('form is invalid: do not submit');
-      } else {
-        console.log('form is valid: submit');
-      }
-    }
+    //   if (!this.showFormErrors()) {
+    //     console.log('form is invalid: do not submit');
+    //   } else {
+    //     console.log('form is valid: submit');
+    //   }
+    // }
     
     showFormErrors() {
       const inputs = document.querySelectorAll('input');
