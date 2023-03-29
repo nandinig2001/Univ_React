@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+// npm i react-redux
 // import Router
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -22,6 +22,8 @@ import Examschedule from "./pages/Examschedule";
 import Exampro from "./pages/Exampro";
 import Admissionpro from "./pages/Admissionpro";
 
+// import Dashboard from "./views/dashboard/Dashboard";
+
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
             <Route exact path="/Examschedule" element={<Examschedule/>} />
             <Route exact path="/Exampro" element={<Exampro/>} />
             <Route exact path="/Admissionpro" element={<Admissionpro/>} />
+
+            {/* <Route exact path="/Dashboard" element={<Dashboard/>} /> */}
           </Routes>
         
         <Footer />
