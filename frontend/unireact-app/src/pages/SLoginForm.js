@@ -118,7 +118,7 @@ class BasicForm extends React.Component {
           <button className="btn btn-warning " style={{height:"4rem", width:"440px",fontSize:"15px"}}
             onClick={ this.handleSubmit }>Submit</button>
         </form>
-        <h5 className="text-center">Click here to <a href="/RegisterForm">Register</a></h5>
+        {/* <h5 className="text-center">Click here to <a href="/RegisterForm">Register</a></h5> */}
         </div>
 
       );

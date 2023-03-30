@@ -37,6 +37,7 @@
     "bootstrap": "^5.2.3",
     "dropdown": "^0.2.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "mdb-react-ui-kit": "^6.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-bootstrap-dropdown": "^0.3.0",

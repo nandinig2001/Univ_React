@@ -30,7 +30,7 @@ function Header() {
 
             <Nav>
           <NavDropdown title="Results" id="collasible-nav-dropdown" style={{ color:"white",fontSize:"15px",paddingRight:"3rem"}}>
-              <NavDropdown.Item href="" style={{  fontSize:"15px" }}>View Results</NavDropdown.Item>
+              <NavDropdown.Item href="Result" style={{  fontSize:"15px" }}>View Results</NavDropdown.Item>
               <NavDropdown.Item href="" style={{ fontSize:"15px" }}>Reval Application</NavDropdown.Item>
                            
             </NavDropdown>
@@ -40,10 +40,10 @@ function Header() {
             <Nav.Link href="#pricing" style={{ color:"white", fontSize:"15px",paddingRight:"3rem" }}>Notice</Nav.Link>
              </Nav>
           <Nav>
-          <NavDropdown title="Log In / Sign Up" id="collasible-nav-dropdown" style={{ color:"black", fontSize:"15px"}}>
-              <NavDropdown.Item href="LoginForm" style={{  fontSize:"15px" }}>Student</NavDropdown.Item>
-              <NavDropdown.Item href="#" style={{ fontSize:"15px" }}>College</NavDropdown.Item>
-              <NavDropdown.Item href="#" style={{fontSize:"15px"}}>University</NavDropdown.Item>
+          <NavDropdown title="Log In" id="collasible-nav-dropdown" style={{ color:"black", fontSize:"15px"}}>
+              <NavDropdown.Item href="SLoginForm" style={{  fontSize:"15px" }}>Student</NavDropdown.Item>
+              <NavDropdown.Item href="CLoginForm" style={{ fontSize:"15px" }}>College</NavDropdown.Item>
+              {/* <NavDropdown.Item href="#" style={{fontSize:"15px"}}>University</NavDropdown.Item> */}
              
             </NavDropdown>
             </Nav>
@@ -60,12 +60,11 @@ function Header() {
               alt="profile-for-user"
             />
           </span>
-          } id="collasible-nav-dropdown" style={{ color:"black", fontSize:"15px", paddingLeft:"8px"}}>
+          } id="collasible-nav-dropdown" style={{ color:"black", fontSize:"15px", paddingLeft:"30px"}}>
                
-              <NavDropdown.Item href="#" style={{  fontSize:"15px" }}>My Profile</NavDropdown.Item>
-              <NavDropdown.Item href="#" style={{ fontSize:"15px" }}>My Records</NavDropdown.Item>
-              <NavDropdown.Item href="#" style={{fontSize:"15px"}}>Notifications</NavDropdown.Item>
-              <NavDropdown.Item href="#" style={{fontSize:"15px"}}>Timetable</NavDropdown.Item>
+              <NavDropdown.Item href="Myprofile" style={{  fontSize:"15px" }}>My Profile</NavDropdown.Item>
+              <NavDropdown.Item href="Myrecords" style={{ fontSize:"15px" }}>My Records</NavDropdown.Item>
+              <NavDropdown.Item href="Notification" style={{fontSize:"15px"}}>Notifications</NavDropdown.Item>
               <NavDropdown.Item href="#" style={{fontSize:"15px"}}>Logout</NavDropdown.Item>
              
             </NavDropdown>
