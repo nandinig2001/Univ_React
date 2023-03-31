@@ -6,6 +6,21 @@ import Table from 'react-bootstrap/Table';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion';
 
+import {
+  MDBCol,
+  MDBContainer,
+  MDBRow,
+  MDBCard,
+  MDBCardText,
+  MDBCardBody,
+  MDBCardImage,
+  MDBBtn,
+    
+  MDBInput,
+  MDBRadio,
+  MDBSelect
+} from 'mdb-react-ui-kit';
+
 const Admissionpro = () => (
   <>
     <main className="my-5 py-5">
@@ -20,7 +35,7 @@ const Admissionpro = () => (
             tag="aside"
             className="pb-5 mb-5 pb-md-0 mb-md-0 mx-auto mx-md-0"
           >
-            <Button variant="dark" className="mb-3 h-3" style={{fontSize:"15px"}}>Apply Now</Button>
+            <Button variant="dark" href="Admissionform" className="mb-3 h-3" style={{fontSize:"15px"}}>Apply Now</Button>
             <Card>
                 <CardImg top width="100%" src="https://i0.wp.com/www.eastmojo.com/wp-content/uploads/2021/12/20200220_InternationalStudentsRecordNumbers.jpg?fit=1200%2C800&ssl=1" alt="banner" />
                 <CardBody>
@@ -131,10 +146,10 @@ const Admissionpro = () => (
             style={{ fontSize: "0.9rem", whiteSpace: "pre-line" }}
           >
             <h4>1. Application: Candidates need to apply for the program of their choice through the online admission portal of Mumbai University. The portal is usually open for a specified period of time, and candidates need to fill in their personal and academic details as well as upload relevant documents.
-                <br></br><br></br>2. Merit List: The university releases a merit list based on the candidate's academic performance and any entrance exams conducted for the program. Candidates who meet the cut-off criteria in the merit list are eligible for further admission processes.
-                <br></br><br></br>3. Document Verification: Candidates need to visit the designated center for document verification. They need to carry their original documents for verification, such as mark sheets, certificates, identity proof, etc.
-                <br></br><br></br>4. Payment of Fees: Candidates who have successfully cleared the document verification process need to pay the admission fees. The fee amount varies depending on the program and the category of the candidate.
-                <br></br><br></br>5. Admission Confirmation: After the payment of fees, the candidate's admission is confirmed, and they are issued an admission letter. Candidates need to report to the college on the specified date to attend the orientation program.
+                <br/><br/>2. Merit List: The university releases a merit list based on the candidate's academic performance and any entrance exams conducted for the program. Candidates who meet the cut-off criteria in the merit list are eligible for further admission processes.
+                <br/><br/>3. Document Verification: Candidates need to visit the designated center for document verification. They need to carry their original documents for verification, such as mark sheets, certificates, identity proof, etc.
+                <br/><br/>4. Payment of Fees: Candidates who have successfully cleared the document verification process need to pay the admission fees. The fee amount varies depending on the program and the category of the candidate.
+                <br/><br/>5. Admission Confirmation: After the payment of fees, the candidate's admission is confirmed, and they are issued an admission letter. Candidates need to report to the college on the specified date to attend the orientation program.
             </h4>
           </article>
         </div>
@@ -183,35 +198,48 @@ const Admissionpro = () => (
         </div>
       </div>
     </div>
-    <Table striped bordered hover>
+    <section>
+    <MDBContainer className="py-5">
+    <Table striped bordered hover style={{fontSize:"15px"}}>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>SR NO</th>
+          <th>COURSE NAME</th>
+          <th>DETAILS</th>
+          <th>APPLICATION START DATE</th>
+          <th>APPLICATION END DATE</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>Bachelors in Engineering CET Based</td>
+          <td><a href="https://www.getmyuni.com/be-course">Link</a></td>
+          <td>22nd April 2023</td>
+          <td>30th May 2023</td>
         </tr>
         <tr>
           <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Bachelors in Mass Media</td>
+          <td><a href="https://www.getmyuni.com/be-course">Link</a></td>
+          <td>30th April 2023</td>
+          <td>22nd June 2023</td>
         </tr>
         <tr>
           <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
+          <td>Bachelors in Business Mangement</td>
+          <td><a href="https://www.getmyuni.com/be-course">Link</a></td>
+          <td>10th May 2023</td>
+          <td>30th June 2023</td>
+        </tr>
+        <tr>
+          
         </tr>
       </tbody>
     </Table>
+    </MDBContainer>
+    </section>
+
   </>
 );
 

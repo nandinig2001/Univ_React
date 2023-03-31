@@ -14,8 +14,8 @@ function Header() {
           <NavDropdown title="Admissions" id="collasible-nav-dropdown" style={{ color:"white",fontSize:"15px",paddingRight:"3rem"}}>
               <NavDropdown.Item href="admissions" style={{  fontSize:"15px" }}>Colleges</NavDropdown.Item>
               <NavDropdown.Item href="Admissionpro" style={{ fontSize:"15px" }}>Application/Process</NavDropdown.Item>
-              <NavDropdown.Item href="" style={{fontSize:"15px"}}>Fee Payment</NavDropdown.Item>
-              <NavDropdown.Item href="" style={{fontSize:"15px"}}>Financial Aid Grant</NavDropdown.Item>
+              {/* <NavDropdown.Item href="" style={{fontSize:"15px"}}>Fee Payment</NavDropdown.Item>
+              <NavDropdown.Item href="" style={{fontSize:"15px"}}>Financial Aid Grant</NavDropdown.Item> */}
                          
             </NavDropdown>
             
@@ -37,7 +37,7 @@ function Header() {
             </Nav>
 
             <Nav.Link href="#pricing" style={{ color:"white", fontSize:"15px",paddingRight:"3rem" }}>Library</Nav.Link>
-            <Nav.Link href="#pricing" style={{ color:"white", fontSize:"15px",paddingRight:"3rem" }}>Notice</Nav.Link>
+            
              </Nav>
           <Nav>
           <NavDropdown title="Log In" id="collasible-nav-dropdown" style={{ color:"black", fontSize:"15px"}}>

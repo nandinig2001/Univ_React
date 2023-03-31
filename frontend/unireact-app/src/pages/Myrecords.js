@@ -103,33 +103,33 @@ const Myprofile = () => {
                 <MDBRow>
                   <MDBCol sm="6">
                   <label class="form-label" for="customFile">10th Std Marksheet:</label>
-                  <input className="btn btn-outline-primary" type="file" class="form-control" id="customFile" />
+                  <input className="btn btn-outline-dark " type="file" class="form-control" id="customFile" />
                   </MDBCol>
                   <MDBCol sm="6">
                   <label class="form-label" for="customFile">12th Std Marksheet:</label>
-                  <input className="btn btn-outline-primary" type="file" class="form-control" id="customFile" />      
+                  <input className="btn btn-outline-dark " type="file" class="form-control" id="customFile" />      
                   </MDBCol>
                 </MDBRow>
-                <hr />
+             
                 <MDBRow>
                   <MDBCol sm="6">
-                  <label class="form-label" for="customFile">All Marksheets:</label>
-                  <input className="btn btn-outline-primary" type="file" class="form-control" id="customFile" />
+                  <label class="form-label" for="customFile" className="m-3">All Marksheets:</label>
+                  <input className="btn btn-outline-dark " type="file" class="form-control" id="customFile" />
                   </MDBCol>
-                  <MDBCol sm="6">
-                  <label class="form-label" for="customFile">Internship Certificates</label>
-                  <input className="btn btn-outline-primary" type="file" class="form-control" id="customFile" />      
+                  <MDBCol sm="6" >
+                  <label class="form-label" for="customFile" className="m-3">Internship Certificates</label>
+                  <input className="btn btn-outline-dark " type="file" class="form-control" id="customFile" />      
                   </MDBCol>
                 </MDBRow>
-                <hr />
+             
                 <MDBRow>
                   <MDBCol sm="6">
-                  <label class="form-label" for="customFile">Extra Curricular Activities:</label>
-                  <input className="btn btn-outline-primary" type="file" class="form-control" id="customFile" />
+                  <label class="form-label" for="customFile" className="m-3">Extra Curricular Activities:</label>
+                  <input className="btn btn-outline-dark" type="file" class="form-control" id="customFile" />
                   </MDBCol>
                   <MDBCol sm="6">
-                  <label class="form-label" for="customFile">Competitions and Achievements</label>
-                  <input className="btn btn-outline-primary" type="file" class="form-control" id="customFile" />      
+                  <label class="form-label" for="customFile" className="m-3">Competitions and Achievements</label>
+                  <input className="btn btn-outline-dark" type="file" class="form-control" id="customFile" />      
                   </MDBCol>
                 </MDBRow>
               </MDBCardBody>

@@ -22,12 +22,13 @@ import Examform from "./pages/Examform";
 import Examschedule from "./pages/Examschedule";
 import Exampro from "./pages/Exampro";
 import Admissionpro from "./pages/Admissionpro";
+import Admissionform from "./pages/Admissionform";
 import Myprofile from "./pages/Myprofile";
 import Myrecords from "./pages/Myrecords";
 import Notification from "./pages/Notification";
 import Result from "./pages/Result";
 
-// import Dashboard from "./views/dashboard/Dashboard";
+import Dashboard from "./views/dashboard/Dashboard";
 
 
 function App() {
@@ -46,12 +47,13 @@ function App() {
             <Route exact path="/Examschedule" element={<Examschedule/>} />
             <Route exact path="/Exampro" element={<Exampro/>} />
             <Route exact path="/Admissionpro" element={<Admissionpro/>} />
+            <Route exact path="/Admissionform" element={<Admissionform/>} />
             <Route exact path="/Myprofile" element={<Myprofile/>} />
             <Route exact path="/Myrecords" element={<Myrecords/>} />
             <Route exact path="/Notification" element={<Notification/>} />
             <Route exact path="/Result" element={<Result/>} />
 
-            {/* <Route exact path="/Dashboard" element={<Dashboard/>} /> */}
+            <Route exact path="/Dashboard" element={<Dashboard/>} />
           </Routes>
         
         <Footer />
