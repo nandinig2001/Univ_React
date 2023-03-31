@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 // npm i react-redux
 // import Router
@@ -32,6 +34,21 @@ import Dashboard from "./views/dashboard/Dashboard";
 
 
 function App() {
+  const [college, setCollege] = useState([])
+  useEffect(()=>{
+    async function getAllColege(){
+      try {
+        const students = await axios.get("http://127.0.0.1:8000/university/college/")
+        console.log(college.data)
+        setCollege(college.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getAllColege()
+  }, [])
+
+  
   return (
     <React.StrictMode>
       <Router>
