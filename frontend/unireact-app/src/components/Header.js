@@ -23,7 +23,7 @@ function Header() {
           <NavDropdown title="Examinations" id="collasible-nav-dropdown" style={{ color:"white",fontSize:"15px",paddingRight:"3rem"}}>
               <NavDropdown.Item href="examform" style={{  fontSize:"15px" }}>Examination Form</NavDropdown.Item>
               <NavDropdown.Item href="examschedule" style={{ fontSize:"15px" }}>Examination Schedule</NavDropdown.Item>
-              <NavDropdown.Item href="exampro" style={{fontSize:"15px"}}>Examination Hall Ticket</NavDropdown.Item>
+              <NavDropdown.Item href="Hallticket" style={{fontSize:"15px"}}>Examination Hall Ticket</NavDropdown.Item>
                          
             </NavDropdown>
             </Nav>
@@ -36,7 +36,7 @@ function Header() {
             </NavDropdown>
             </Nav>
 
-            <Nav.Link href="#pricing" style={{ color:"white", fontSize:"15px",paddingRight:"3rem" }}>Library</Nav.Link>
+            <Nav.Link href="https://www.library.iitb.ac.in/" style={{ color:"white", fontSize:"15px",paddingRight:"3rem" }}>Library</Nav.Link>
             
              </Nav>
           <Nav>

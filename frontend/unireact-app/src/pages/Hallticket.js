@@ -19,7 +19,7 @@ import {
   
 } from 'mdb-react-ui-kit';
 
-const Result = () => {
+const Hallticket = () => {
   return (
     <>
      <Carousel>
@@ -31,7 +31,8 @@ const Result = () => {
           style={{ height:"50rem" }}
         />
         <Carousel.Caption>
-          <h1>RESULTS</h1>
+          <h1>Examination</h1>
+          <h3>Hall ticket</h3>
         </Carousel.Caption>
       </Carousel.Item>    
     </Carousel>
@@ -39,7 +40,7 @@ const Result = () => {
     <div className="row mt-5">
 <div className="col-md-12">
   <div className="main-title text-center wow fadeIn">
-    <h3>View Results</h3>
+    <h3>Download Hall Ticket</h3>
     <div className="underline1"></div>
     <div className="underline2"></div>
   
@@ -51,9 +52,9 @@ const Result = () => {
 <MDBContainer className="py-5 mt-5" style={{width:"50rem"}}>
    <form>    
    <Form.Select aria-label="Select"   style={{fontSize:"1.5rem"}}>
-      <option value="1">Summer Session 2023</option>
-        <option value="2">Winter Session March 2023</option>
-        <option value="3">Winter Session Dec 2022</option>
+      <option value="1">Bachelors in Engineering/Bachelors in Technology</option>
+        <option value="2">Bachelors in Management Studies</option>
+        <option value="3">Bachelors in Mass Media</option>
     </Form.Select>
     <h5 style={{marginBottom:"1.5rem"}} >Course</h5>
       <MDBInput id='form4Example1' wrapperClass='mb-4' label='UserName' />
@@ -71,4 +72,4 @@ const Result = () => {
   );
 };
 
-export default Result;
+export default Hallticket;

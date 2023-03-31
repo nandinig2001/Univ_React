@@ -20,7 +20,7 @@ import RegisterForm from "./pages/RegisterForm";
 import Admissions from "./pages/Admissions";
 import Examform from "./pages/Examform";
 import Examschedule from "./pages/Examschedule";
-import Exampro from "./pages/Exampro";
+import Hallticket from "./pages/Hallticket";
 import Admissionpro from "./pages/Admissionpro";
 import Admissionform from "./pages/Admissionform";
 import Myprofile from "./pages/Myprofile";
@@ -45,7 +45,7 @@ function App() {
             <Route exact path="/Admissions" element={<Admissions/>} />
             <Route exact path="/Examform" element={<Examform/>} />
             <Route exact path="/Examschedule" element={<Examschedule/>} />
-            <Route exact path="/Exampro" element={<Exampro/>} />
+            <Route exact path="/Hallticket" element={<Hallticket/>} />
             <Route exact path="/Admissionpro" element={<Admissionpro/>} />
             <Route exact path="/Admissionform" element={<Admissionform/>} />
             <Route exact path="/Myprofile" element={<Myprofile/>} />
