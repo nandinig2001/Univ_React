@@ -1,7 +1,6 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate, login
 from rest_framework import status
@@ -11,10 +10,10 @@ from .models import College, Department, UserProfile, Course, CourseContent, Ass
 from .serializers import CollegeSerializer, DepartmentSerializer, UserProfileSerializer, CourseSerializer, CourseContentSerializer, AssignmentSerializer, GradeSerializer, ERPSerializer
 from rest_framework.permissions import AllowAny
 from .serializers import RegistrationSerializer
-from .serializers import LoginSerializer
 from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.decorators import api_view
 
-class UserLoginView(ObtainAuthToken):
+class EmailLoginAuthToken(ObtainAuthToken):
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data, context={'request': request})
         if serializer.is_valid():
@@ -23,6 +22,17 @@ class UserLoginView(ObtainAuthToken):
             return Response({'token': token.key})
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def authenticate(self, request, username=None, password=None, **kwargs):
+        try:
+            user = User.objects.get(email=username)
+        except User.DoesNotExist:
+            return None
+
+        if user.check_password(password):
+            return user
+
+        return None
     
 class RegistrationAPIView(APIView):
     serializer_class = RegistrationSerializer
@@ -126,4 +136,12 @@ class ERPListCreateView(generics.ListCreateAPIView):
 class ERPDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = ERP.objects.all()
     serializer_class = ERPSerializer
+
+
+@api_view(['GET'])
+def login_status(request):
+    if request.user.is_authenticated:
+        return Response({'isLoggedIn': True}, status=status.HTTP_200_OK)
+    else:
+        return Response({'isLoggedIn': False}, status=status.HTTP_200_OK)
 

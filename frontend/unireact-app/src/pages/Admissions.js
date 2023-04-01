@@ -23,7 +23,7 @@ const Admissions = () => {
 
     {/* FILTER */}
 
-
+    
     {/* CARD */}
     <div className="main-title text-center wow fadeIn">
    <h1 style={{ padding:"10px" }}>List Of College</h1>

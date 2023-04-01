@@ -38,7 +38,7 @@ function App() {
   useEffect(()=>{
     async function getAllColege(){
       try {
-        const students = await axios.get("http://127.0.0.1:8000/university/college/")
+        const students = await axios.get("http://127.0.0.1:8000/colleges/")
         console.log(college.data)
         setCollege(college.data)
       } catch (error) {

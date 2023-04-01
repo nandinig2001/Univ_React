@@ -35,6 +35,8 @@ from university.views import (
     GradeListView,
     ERPListCreateView,
     ERPDetailView,
+    EmailLoginAuthToken,
+    login_status,
 )
 
 urlpatterns = [
@@ -55,7 +57,9 @@ urlpatterns = [
     path('erps/', ERPListCreateView.as_view(), name='erp_list_create'),
     path('erps/<int:pk>/', ERPDetailView.as_view(), name='erp_detail'),
     path('admin/', admin.site.urls),
+    path('api-auth/login/', EmailLoginAuthToken.as_view(), name='login'),
+    path('api-auth/login-status/', login_status, name='login-status'),
     path('api-auth/', include('rest_framework.urls')),
-    path('accounts/', include('allauth.urls')),
+    
 
 ]

@@ -10,7 +10,7 @@ class BasicForm extends React.Component {
     } else {
   
       // call login API
-      fetch('http://127.0.0.1:8010/accounts/login/', {
+      fetch('http://127.0.0.1:8000/api-auth/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -22,12 +22,14 @@ class BasicForm extends React.Component {
       })
       .then(response => {
         if (response.ok) {
-          // login success
-          console.log('login success');
+          return response.json();
         } else {
-          // login failed
-          console.log('login failed');
+          throw new Error('Login failed.');
         }
+      })
+      .then(data => {
+        localStorage.setItem('authToken', data.authToken);
+        window.location.href = '/';
       })
       .catch(error => {
         console.error('login error', error);
