@@ -39,10 +39,10 @@ const Admissions = () => {
                 <h3>Thadomal Shahani Enginnering College</h3>
                 <Card.Title>Location: Bandra Mumbai</Card.Title>
                 <Card.Title>Course: BE/B.tech</Card.Title>
-                <Card.Title>Rank: 15th</Card.Title>
-                <Card.Title>Location: Bandra Mumbai</Card.Title>
-                <Card.Title>Placement: ₹ 8.5 avg Lpa</Card.Title>
-                <Card.Title>Reviews: 8.5 /10</Card.Title>
+                <Card.Title>Contact_email</Card.Title>
+                <Card.Title>Eastablished year</Card.Title>
+                <Card.Title>Accrediation</Card.Title>
+                <Card.Title>Ranking</Card.Title>
                              
                 <Button variant="primary" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Visit Website</Button>
                 <Button variant="warning" style={{padding:"1rem", margin:"1rem" , fontSize:"1.5rem"}}>Apply Now</Button>
@@ -56,13 +56,13 @@ const Admissions = () => {
         <Card style={{ width: '40rem' }}>
             <Card.Img variant="top" style={{height:"25rem"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmOj3qpyCpfZMH1HrqTbN80WIDoiFsijXJVQ&usqp=CAU" />
             <Card.Body>
-                <h3>Thadomal Shahani Enginnering College</h3>
+            <h3>Thadomal Shahani Enginnering College</h3>
                 <Card.Title>Location: Bandra Mumbai</Card.Title>
                 <Card.Title>Course: BE/B.tech</Card.Title>
-                <Card.Title>Rank: 15th</Card.Title>
-                <Card.Title>Location: Bandra Mumbai</Card.Title>
-                <Card.Title>Placement: ₹ 8.5 avg Lpa</Card.Title>
-                <Card.Title>Reviews: 8.5 /10</Card.Title>
+                <Card.Title>Contact_email</Card.Title>
+                <Card.Title>Eastablished year</Card.Title>
+                <Card.Title>Accrediation</Card.Title>
+                <Card.Title>Ranking</Card.Title>
                              
                 <Button variant="primary" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Visit Website</Button>
                 <Button variant="warning" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Apply Now</Button>
@@ -76,13 +76,13 @@ const Admissions = () => {
         <Card style={{ width: '40rem' }}>
             <Card.Img variant="top" style={{height:"25rem"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmOj3qpyCpfZMH1HrqTbN80WIDoiFsijXJVQ&usqp=CAU" />
             <Card.Body>
-                <h3>Thadomal Shahani Enginnering College</h3>
+            <h3>Thadomal Shahani Enginnering College</h3>
                 <Card.Title>Location: Bandra Mumbai</Card.Title>
                 <Card.Title>Course: BE/B.tech</Card.Title>
-                <Card.Title>Rank: 15th</Card.Title>
-                <Card.Title>Location: Bandra Mumbai</Card.Title>
-                <Card.Title>Placement: ₹ 8.5 avg Lpa</Card.Title>
-                <Card.Title>Reviews: 8.5 /10</Card.Title>
+                <Card.Title>Contact_email</Card.Title>
+                <Card.Title>Eastablished year</Card.Title>
+                <Card.Title>Accrediation</Card.Title>
+                <Card.Title>Ranking</Card.Title>
                              
                 <Button variant="primary" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Visit Website</Button>
                 <Button variant="warning" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Apply Now</Button>
@@ -99,13 +99,13 @@ const Admissions = () => {
         <Card style={{ width: '40rem' }}>
             <Card.Img variant="top" style={{height:"25rem"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmOj3qpyCpfZMH1HrqTbN80WIDoiFsijXJVQ&usqp=CAU" />
             <Card.Body>
-                <h3>Thadomal Shahani Enginnering College</h3>
+            <h3>Thadomal Shahani Enginnering College</h3>
                 <Card.Title>Location: Bandra Mumbai</Card.Title>
                 <Card.Title>Course: BE/B.tech</Card.Title>
-                <Card.Title>Rank: 15th</Card.Title>
-                <Card.Title>Location: Bandra Mumbai</Card.Title>
-                <Card.Title>Placement: ₹ 8.5 avg Lpa</Card.Title>
-                <Card.Title>Reviews: 8.5 /10</Card.Title>
+                <Card.Title>Contact_email</Card.Title>
+                <Card.Title>Eastablished year</Card.Title>
+                <Card.Title>Accrediation</Card.Title>
+                <Card.Title>Ranking</Card.Title>
                              
                 <Button variant="primary" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Visit Website</Button>
                 <Button variant="warning" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Apply Now</Button>
@@ -119,13 +119,13 @@ const Admissions = () => {
         <Card style={{ width: '40rem' }}>
             <Card.Img variant="top" style={{height:"25rem"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmOj3qpyCpfZMH1HrqTbN80WIDoiFsijXJVQ&usqp=CAU" />
             <Card.Body>
-                <h3>Thadomal Shahani Enginnering College</h3>
+            <h3>Thadomal Shahani Enginnering College</h3>
                 <Card.Title>Location: Bandra Mumbai</Card.Title>
                 <Card.Title>Course: BE/B.tech</Card.Title>
-                <Card.Title>Rank: 15th</Card.Title>
-                <Card.Title>Location: Bandra Mumbai</Card.Title>
-                <Card.Title>Placement: ₹ 8.5 avg Lpa</Card.Title>
-                <Card.Title>Reviews: 8.5 /10</Card.Title>
+                <Card.Title>Contact_email</Card.Title>
+                <Card.Title>Eastablished year</Card.Title>
+                <Card.Title>Accrediation</Card.Title>
+                <Card.Title>Ranking</Card.Title>
                              
                 <Button variant="primary" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Visit Website</Button>
                 <Button variant="warning" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Apply Now</Button>
@@ -139,13 +139,13 @@ const Admissions = () => {
         <Card style={{ width: '40rem' }}>
             <Card.Img variant="top" style={{height:"25rem"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmOj3qpyCpfZMH1HrqTbN80WIDoiFsijXJVQ&usqp=CAU" />
             <Card.Body>
-                <h3>Thadomal Shahani Enginnering College</h3>
+            <h3>Thadomal Shahani Enginnering College</h3>
                 <Card.Title>Location: Bandra Mumbai</Card.Title>
                 <Card.Title>Course: BE/B.tech</Card.Title>
-                <Card.Title>Rank: 15th</Card.Title>
-                <Card.Title>Location: Bandra Mumbai</Card.Title>
-                <Card.Title>Placement: ₹ 8.5 avg Lpa</Card.Title>
-                <Card.Title>Reviews: 8.5 /10</Card.Title>
+                <Card.Title>Contact_email</Card.Title>
+                <Card.Title>Eastablished year</Card.Title>
+                <Card.Title>Accrediation</Card.Title>
+                <Card.Title>Ranking</Card.Title>
                              
                 <Button variant="primary" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Visit Website</Button>
                 <Button variant="warning" style={{padding:"1rem", margin:"1rem", fontSize:"1.5rem"}}>Apply Now</Button>
